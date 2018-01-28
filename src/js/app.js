@@ -11,8 +11,6 @@ if ('serviceWorker' in navigator) {
 
 }
 
-
-
 // Function to perform HTTP request
 var get = function(url) {
   return new Promise(function(resolve, reject) {
@@ -29,11 +27,11 @@ var get = function(url) {
             }
         }
     };
-    
+
     xhr.open("GET", url, true);
     xhr.send();
 
-  }); 
+  });
 };
 
 
@@ -46,6 +44,3 @@ get('https://api.nasa.gov/planetary/earth/imagery?api_key=fWfSMcDzyHfMuH3BW6jiIU
   .catch(function(err) {
     console.log("Error", err);
   })
-
-
-
